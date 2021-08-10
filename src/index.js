@@ -27,10 +27,11 @@ function overrideJestConfig({ jestConfig }) {
 			'jest+transform',
 		)
 	}
+	// Disabled until I can fix it :(
+	// jestConfig.transform[babelTransformKey] = require.resolve(
+	// 	'./babelTransform.js',
+	// )
 
-	jestConfig.transform[babelTransformKey] = require.resolve(
-		'./babelTransform.js',
-	)
 	return jestConfig
 }
 
@@ -85,11 +86,11 @@ function transformBabelLoader(loader, pluginOptions) {
 				loader: loader.loader,
 				options: {
 					...options,
-					presets: presets.concat('linaria/babel'),
+					presets: presets.concat('@linaria'),
 				},
 			},
 			{
-				loader: 'linaria/loader',
+				loader: '@linaria/webpack-loader',
 				options: {
 					cacheDirectory: 'src/.linaria_cache',
 					sourceMap: process.env.NODE_ENV !== 'production',

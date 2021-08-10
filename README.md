@@ -5,8 +5,8 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 A [craco](https://www.npmjs.com/package/@craco/craco) plugin to use
-[Linaria v2](https://github.com/callstack/linaria/tree/2.0.x) zero-runtime CSS
-in JS library in a Create React App.
+[Linaria v3](https://github.com/callstack/linaria) zero-runtime CSS in JS
+library in a Create React App.
 
 ## Installation
 
@@ -14,10 +14,13 @@ First, follow craco's
 [installation instructions](https://github.com/sharegate/craco/blob/master/packages/craco/README.md#installation).
 
 Then, install `craco-linaria` and
-[Linaria v2](https://github.com/callstack/linaria/tree/2.0.x):
+[Linaria v3](https://github.com/callstack/linaria):
 
 ```bash
-$ npm install --save-dev craco-linaria linaria
+# Using npm
+npm install --save-dev craco-linaria @linaria/babel-preset @linaria/core @linaria/react @linaria/shaker @linaria/webpack-loader
+# Or, using yarn
+yarn add --dev craco-linaria @linaria/babel-preset @linaria/core @linaria/react @linaria/shaker @linaria/webpack-loader
 ```
 
 ## Usage
