@@ -26,7 +26,7 @@ module.exports = babelJest.createTransformer({
 		/** The next line is the only necessary addition compared to react-scripts@4.0.3.
 		 *  The rest of the file is just a copy of the same file in `react-scripts`.
 		 */
-		'linaria/babel',
+		'@linaria',
 	],
 	babelrc: false,
 	configFile: false,
